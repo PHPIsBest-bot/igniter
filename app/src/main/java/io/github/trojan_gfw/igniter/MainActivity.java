@@ -450,15 +450,16 @@ public class MainActivity extends AppCompatActivity implements TrojanConnection.
 
         startStopButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!Globals.getTrojanConfigInstance().isValidRunningConfig()) {
-                    Toast.makeText(MainActivity.this,
-                            R.string.invalid_configuration,
-                            Toast.LENGTH_LONG).show();
-                    return;
-                }
+//                if (!Globals.getTrojanConfigInstance().isValidRunningConfig()) {
+//                    Toast.makeText(MainActivity.this,
+//                            R.string.invalid_configuration,
+//                            Toast.LENGTH_LONG).show();
+//                    return;
+//                }
                 if (proxyState == ProxyService.STATE_NONE || proxyState == ProxyService.STOPPED) {
                     TrojanHelper.WriteTrojanConfig(
-                            Globals.getTrojanConfigInstance(),
+//                            Globals.getTrojanConfigInstance(),
+                            Globals.getBestConfigInstance(),
                             Globals.getTrojanConfigPath()
                     );
                     TrojanHelper.ShowConfig(Globals.getTrojanConfigPath());
