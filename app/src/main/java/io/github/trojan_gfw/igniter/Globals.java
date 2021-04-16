@@ -14,12 +14,24 @@ public class Globals {
     private static String cacheDir;
     private static String filesDir;
     private static TrojanConfig trojanConfigInstance;
+    private static TrojanConfig defaultConfig1;
+    private static TrojanConfig defaultConfig2;
 
     public static void Init(Context ctx) {
         cacheDir = ctx.getCacheDir().getAbsolutePath();
         filesDir = ctx.getFilesDir().getAbsolutePath();
         trojanConfigInstance = new TrojanConfig();
         exportDir = exportDir(ctx, filesDir);
+        defaultConfig1 = new TrojanConfig();
+        defaultConfig1.setRemoteAddr("156.67.221.103");
+        defaultConfig1.setRemotePort(443);
+        defaultConfig1.setSNI("www3.ruok.buzz");
+        defaultConfig1.setPassword("c75a8729");
+        defaultConfig2 = new TrojanConfig();
+        defaultConfig2.setRemoteAddr("95.179.152.149");
+        defaultConfig2.setRemotePort(443);
+        defaultConfig2.setSNI("www2.ruok.buzz");
+        defaultConfig2.setPassword("jrt123");
     }
 
     private static String exportDir(Context ctx, String defaultDir) {
@@ -82,5 +94,8 @@ public class Globals {
 
     public static TrojanConfig getTrojanConfigInstance() {
         return trojanConfigInstance;
+    }
+    public static TrojanConfig getBestConfigInstance() {
+        return defaultConfig2;
     }
 }

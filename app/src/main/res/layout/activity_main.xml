@@ -29,6 +29,7 @@
             app:srcCompat="@mipmap/ic_launcher_foreground" />
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/remoteServerRemarkText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,6 +41,7 @@
 
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/remoteAddrText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +52,7 @@
             app:layout_constraintTop_toBottomOf="@+id/remoteServerRemarkText" />
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/remoteServerSNIText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,6 +63,7 @@
             app:layout_constraintTop_toBottomOf="@+id/remoteAddrText" />
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/remotePortText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,6 +77,7 @@
             app:layout_constraintTop_toBottomOf="@+id/remoteServerSNIText" />
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/passwordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,6 +89,7 @@
             app:layout_constraintTop_toBottomOf="@+id/remotePortText" />
 
         <Switch
+            android:visibility="gone"
             android:id="@+id/ipv6Switch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -94,6 +100,7 @@
             app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
         <Switch
+            android:visibility="gone"
             android:id="@+id/verifySwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,6 +112,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ipv6Switch" />
 
         <Switch
+            android:visibility="gone"
             android:id="@+id/clashSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,6 +124,7 @@
             app:layout_constraintTop_toBottomOf="@+id/verifySwitch" />
 
         <Switch
+            android:visibility="gone"
             android:id="@+id/allowLanSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
